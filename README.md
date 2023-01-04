@@ -40,13 +40,26 @@ The new way to go when it comes to define cloud infra at ThousandEyes. It's kind
 ### Prometheus
 * Explain Local and normal instance
 * Methods used to configure scrape jobs: ec2 autodiscovery, puppet db, config file in deployment repo, annotations/k8s auto-discover, ...
-* 
+* https://grafana.stg.gcp.thousandeyes.com:30004/d/obs-overview/observability-overview?editPanel=7&orgId=1&from=now-90d&to=now
+* deployment repo and argo
+* match between different environments in the dropdown and the cluster
+* metrics exposed
+* different instances and kubernetes clusters where it is deployed
+* Explain how normal and local instances work together > Graph
+* Meaningful health dashboards
+
 
 ### Thanos
 As a long term storage
 * For how long?
 * Where to check it?
 * Process that moves the metrics to S3?
+* https://grafana.stg.gcp.thousandeyes.com:30004/d/obs-overview/observability-overview?editPanel=7&orgId=1&from=now-90d&to=now
+* deployment repo and argo
+* match between different environments in the dropdown and the cluster
+* metrics exposed
+* different instances and kubernetes clusters where it is deployed
+* Meaningful health dashboards
 
 ### S3
 It's used for cold storage or metrics that have exceed the storage policy on Thanos. Metrics in S3 are stored:
@@ -55,7 +68,13 @@ It's used for cold storage or metrics that have exceed the storage policy on Tha
 
 ### Grafana
 Metrics FrontEnd
-
+* https://grafana.stg.gcp.thousandeyes.com:30004/d/obs-overview/observability-overview?editPanel=7&orgId=1&from=now-90d&to=now
+* deployment repo and argo
+* match between different environments in the dropdown and the cluster
+* metrics exposed
+* different instances and kubernetes clusters where it is deployed
+* Sync dashboards between stg and prod
+* Meaningful health dashboards
 
 ### Pushgateway
 * Where is it deployed?
@@ -99,35 +118,6 @@ Long term logs database
 * Grafana, ES, Kibana, Argo, Artifact, AWS account list, ...
 
 
-
-## Grafana
-* https://grafana.stg.gcp.thousandeyes.com:30004/d/obs-overview/observability-overview?editPanel=7&orgId=1&from=now-90d&to=now
-* deployment repo and argo
-* match between different environments in the dropdown and the cluster
-* metrics exposed
-* different instances and kubernetes clusters where it is deployed
-* Sync dashboards between stg and prod
-* Meaningful health dashboards
-
-## Thanos
-* https://grafana.stg.gcp.thousandeyes.com:30004/d/obs-overview/observability-overview?editPanel=7&orgId=1&from=now-90d&to=now
-* deployment repo and argo
-* match between different environments in the dropdown and the cluster
-* metrics exposed
-* different instances and kubernetes clusters where it is deployed
-* Meaningful health dashboards
-
-## Prometheus
-* https://grafana.stg.gcp.thousandeyes.com:30004/d/obs-overview/observability-overview?editPanel=7&orgId=1&from=now-90d&to=now
-* deployment repo and argo
-* match between different environments in the dropdown and the cluster
-* metrics exposed
-* different instances and kubernetes clusters where it is deployed
-* Explain how normal and local instances work together > Graph
-* Meaningful health dashboards
-
-
-## What the heck is that thing of kinesis and how we use it
 
 # Questions
 * Why do we have `/stacks/observability` and `/stacks/opensearch-observability`?
